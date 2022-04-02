@@ -8,9 +8,11 @@ const Lyout = (props) => {
     <div>
       <Container>
         <Head>
-          <link rel="stylesheet" href="https://cdn.tailwindcss.com"></link>
+          {/* <link rel="stylesheet" href="https://cdn.tailwindcss.com"></link> */}
+          <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"></link>
         </Head>
         <hdr />
+        {props.children}
       </Container>
     </div>
   );
