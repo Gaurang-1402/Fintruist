@@ -2,8 +2,9 @@ import logo from "./logo.svg"
 import "./App.css"
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
 import Homepage from "./Pages/Homepage/Homepage"
-import SideNav from "./Components/SideNav/SideNav"
+import SideNav from "./components/SideNav/SideNav"
 import background from "./assets/images/background.png"
+import Login from "./Pages/signup/login"
 
 
 function App() {

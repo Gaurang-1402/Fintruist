@@ -2,7 +2,7 @@ import React from "react"
 import logo from "../../assets/images/logo.png"
 import background from "../../assets/images/background.png"
 import { useNavigate } from "react-router-dom"
-import sideStuff from "../../assets/images/sideStuff.png"
+import sideStuff from "../../assets/images/sidestuff.png"
 const Homepage = () => {
   //   const navigate = useNavigate()
 
