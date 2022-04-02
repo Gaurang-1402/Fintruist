@@ -5,7 +5,7 @@ import Homepage from "./Pages/Homepage/Homepage";
 import PaymentResultPage from "./Pages/PaymentResult/PaymentResult";
 import CreatePaymentLinkPage from "./Pages/CreatePaymentLinkPage/CreatePaymentLinkPage";
 import SideNav from "./components/SideNav/SideNav";
-// import Button from "@material-tailwind/react/Button";
+import LogoutButton from "./components/LogoutButton/LogoutButton";
 
 import {
   useMoralis,
@@ -20,7 +20,6 @@ import {
 
 import background from "./assets/images/background.png";
 import metamask from "./assets/images/metamask.png";
-import auth0 from "./assets/images/auth0.png";
 function App() {
   const { authenticate, isAuthenticated, logout } = useMoralis();
 
@@ -28,20 +27,18 @@ function App() {
     <>
       <div className="App flex h-screen bg-cust_back">
         <Router>
-          <SideNav />
-          <Routes>
-            <Route exact path="/" element={<Homepage />} />
-            <Route exact path="/create" element={<CreatePaymentLinkPage />} />
-            <Route exact path="/result" element={<PaymentResultPage />} />
-          </Routes>
+          {/* <Route exact path="/" component={Login} /> */}
+          <div className="flex">
+            <SideNav />
+            <Routes>
+              <Route exact path="/" element={<Homepage />} />
+              <Route exact path="/create" element={<CreatePaymentLinkPage />} />
+              <Route exact path="/result" element={<PaymentResultPage />} />
+            </Routes>
+          </div>
           <div className="flex w-full justify-end pr-5">
             <div className="pt-4 pr-5">
-              <img
-                src={auth0}
-                onClick={() => {
-                  console.log("done");
-                }}
-              />
+              <LogoutButton />
             </div>
             <div className="pt-4  align-right pr-3">
               {isAuthenticated && (
