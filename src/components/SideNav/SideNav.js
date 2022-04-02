@@ -5,12 +5,15 @@ import faq from "../../assets/icons/faq.png"
 import dashboard from "../../assets/icons/dashboard.png"
 import github from "../../assets/icons/github.svg"
 import { useNavigate } from "react-router-dom"
+import {useLocation} from 'react-router-dom'
 
 const SideNav = () => {
   const navigate = useNavigate()
   const goHome = () => {
     navigate("/")
   }
+  const location = useLocation()
+  console.log(location.pathname)
 
   return (
     <div
