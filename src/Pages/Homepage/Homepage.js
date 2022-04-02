@@ -1,7 +1,7 @@
 import React from "react"
 
 const Homepage = () => {
-  return <div>Homepage</div>
+  return <div className='h-screen bg-cust_back'></div>
 }
 
 export default Homepage
