@@ -4,13 +4,13 @@ import Button from '../../components/Button/Button'
 import { FiInfo, FiCopy } from "react-icons/fi";
 const PaymentResult = () => {
   return (
-    <div className="grid grid-row-2 grid-flow-row">
+    <div className="grid grid-row-2 grid-flow-row ml-5" >
       <div>
         <h1 class="text-5xl float-left mb-4">Payment Link Is Created</h1>
 
       </div>
 
-      <div className="backgroundCard grid grid-cols-1 gap-2">
+      <div className="backgroundCard grid grid-cols-1 gap-2 rounded-2xl">
         <div className="m-3">
             <h3 className="text-3xl text-left sfloat-left text-white m-4">Share this link with the buyer. Once the buyer deposits tokens into the address, you will be redirected to the next step.</h3>
         </div>
