@@ -12,43 +12,12 @@ const LoginForm = () => {
 
   const [password, setPassword] = useState("")
   const [email, setEmail] = useState("")
-
-  // let navigate = useNavigate()
-
-  //   const handleSubmit = (e) => {
-  //     e.preventdefault()
-  //     var data = JSON.stringify({
-  //       action: "loginpatient",
-  //       email: "johndoe@email.com",
-  //       password: "unsafepassword",
-  //     })
-
-  //     var config = {
-  //       method: "post",
-  //       url: "https://us-central1-aiot-fit-xlab.cloudfunctions.net/parampower",
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //       },
-  //       data: data,
-  //     }
-
-  //     axios(config)
-  //       .then(function (response) {
-  //         console.log(JSON.stringify(response.data))
-  //         toast.success("Login Successful")
-  //         navigate("/")
-  //       })
-  //       .catch(function (error) {
-  //         toast.error("login failed")
-  //         console.log(error)
-  //       })
-  //   }
   return (
   
     <div>
       <div className='flex m-auto flex-col w-full max-w-md px-4 py-8 bg-white rounded-lg shadow dark:bg-gray-800 sm:px-6 md:px-8 lg:px-10'>
         <div className='self-center mb-6 text-xl font-light text-gray-600 sm:text-2xl dark:text-white'>
-          Login To Your Account
+          Welcome Back
         </div>
         <div className='mt-8'>
           {/* <form onSubmit={(e) => handleSubmit(e)}> */}

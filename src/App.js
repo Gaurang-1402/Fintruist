@@ -18,7 +18,7 @@ function App() {
           <SideNav />
           <Routes>
             <Route exact path='/' element={<Homepage />} />
-            <Login />
+            <Route exact path='/login' element={<Login />} />
           </Routes>
         </Router>
       </div>
