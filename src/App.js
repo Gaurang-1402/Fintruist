@@ -2,17 +2,25 @@ import logo from "./logo.svg"
 import "./App.css"
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
 import Homepage from "./Pages/Homepage/Homepage"
+import SideNav from "./Components/SideNav/SideNav"
+import background from "./assets/images/background.png"
 
 
 function App() {
   return (
-    <div className='App bg-cust_back'>
-      <Router>
-        <Routes>
-          <Route exact path='/' element={<Homepage />} />
-        </Routes>
-      </Router>
-    </div>
+    <>
+      <div
+        className='App flex bg-cust_back'
+        style={{ backgroundImage: `url(${background})` }}
+      >
+        <Router>
+          <SideNav />
+          <Routes>
+            <Route exact path='/' element={<Homepage />} />
+          </Routes>
+        </Router>
+      </div>
+    </>
   )
 }
 
