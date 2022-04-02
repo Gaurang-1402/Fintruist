@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Homepage from "./Pages/Homepage/Homepage";
 import PaymentResultPage from "./Pages/PaymentResult/PaymentResult";
 import CreatePaymentLinkPage from "./Pages/CreatePaymentLinkPage/CreatePaymentLinkPage";
+import Login from "./Pages/LoginPage/LoginPage";
 import SideNav from "./components/SideNav/SideNav";
 import LogoutButton from "./components/LogoutButton/LogoutButton";
 
@@ -27,13 +28,13 @@ function App() {
     <>
       <div className="App flex h-screen bg-cust_back">
         <Router>
-          {/* <Route exact path="/" component={Login} /> */}
           <div className="flex">
             <SideNav />
             <Routes>
               <Route exact path="/" element={<Homepage />} />
               <Route exact path="/create" element={<CreatePaymentLinkPage />} />
               <Route exact path="/result" element={<PaymentResultPage />} />
+              <Route exact path="/login" element={<Login />} />
             </Routes>
           </div>
           <div className="flex w-full justify-end pr-5">
