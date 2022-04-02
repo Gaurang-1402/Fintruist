@@ -51,8 +51,12 @@ class RewNew extends Component {
   render() {
     return (
       <Lyout>
+        <Link route={`/campaigns/${this.props.address}/requests`}>
+          <a>Back</a>
+        </Link>
         <h3>Create new Request</h3>
         <Form onSubmit={this.onSubmit} error={!!this.state.errorMessage}>
+
           <Form.Field>
             <label>Description</label>
             <Input
@@ -62,6 +66,7 @@ class RewNew extends Component {
               }
             />
           </Form.Field>
+
           <Form.Field>
             <label>Value in Ether</label>
             <Input
@@ -69,7 +74,19 @@ class RewNew extends Component {
               onChange={(event) => this.setState({ value: event.target.value })}
             />
           </Form.Field>
+
+          <Form.Field>
+            <label>Recipient</label>
+            <Input
+              value={this.state.recipient}
+              onChange={(event) =>
+                this.setState({ recipient: event.target.value })
+              }
+            />
+          </Form.Field>
+
           <Message error header="Oops!" content={this.state.errorMessage} />
+          {/* <Button loading={this.state.loading} primary> */}
           <Button primary loading={this.state.loading}>
             Create!
           </Button>
