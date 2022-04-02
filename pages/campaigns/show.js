@@ -22,6 +22,56 @@ class CampaignShow extends Component {
     };
   }
 
+  renderCards() {
+    const {
+      balance,
+      manager,
+      minContrib,
+      requestsCount,
+      approversCount,
+    } = this.props;
+
+    const items = [
+      {
+        hdr: manager,
+        meta: "Address of Manager",
+        description:
+          "The manager has created a campaign & can create requests to withdraw money",
+        style: { overflowWrap: "break-word" },
+      },
+      {
+        hdr: minContrib,
+        meta: "Minimum Contribution (wei)",
+        description:
+          // "You must contribute atleast this much (amount) Wei so that you can become an approver",
+          "You must contribute atleast this much (amount) Wei to become an approver",
+      },
+      {
+        hdr: requestsCount,
+        meta: "Number of Requests",
+        description:
+          // "A single request tries to withdraw money directly from the contract & those must be approved by the approvers",
+          "A request tries to withdraw money from the contract. Requests must be approved by approvers",
+      },
+      {
+        hdr: approversCount,
+        meta: "Number of Approvers",
+        description:
+          // "Count of Campaign donators",
+          "Number of people who have already donated to this campaign",
+      },
+      {
+        hdr: web3.utils.fromWei(balance, "ether"),
+        meta: "Campaign Balance (ether)",
+        description:
+          // "The balance is how much money this campaign has left to spend.",
+          "The amount of money left to spend for this campaign",
+      },
+    ];
+
+    return <Card.Group items={items} />;
+  }
+
   render() {
     return (
       <Lyout>
