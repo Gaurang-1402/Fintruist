@@ -2,9 +2,11 @@
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Homepage from "./Pages/Homepage/Homepage";
-import PaymentResultPage from "./Pages/PaymentResult/PaymentResult";
+import PaymentResult from "./Pages/PaymentResult/PaymentResult";
+import PaymentReceived from "./Pages/PaymentReceived/PaymentReceived";
 import CreatePaymentLinkPage from "./Pages/CreatePaymentLinkPage/CreatePaymentLinkPage";
-import Login from "./Pages/LoginPage/LoginPage";
+import ProductInformationPage from "./Pages/ProductInformationPage/ProductInformationPage";
+import LoginPage from "./Pages/LoginPage/LoginPage";
 import SideNav from "./components/SideNav/SideNav";
 import LogoutButton from "./components/LogoutButton/LogoutButton";
 
@@ -32,9 +34,12 @@ function App() {
             <SideNav />
             <Routes>
               <Route exact path="/" element={<Homepage />} />
+              <Route exact path="/login" element={<LoginPage />} />
+              <Route exact path="/info" element={<ProductInformationPage />} />
+              <Route exact path="/received" element={<PaymentReceived />} />
+
               <Route exact path="/create" element={<CreatePaymentLinkPage />} />
-              <Route exact path="/result" element={<PaymentResultPage />} />
-              <Route exact path="/login" element={<Login />} />
+              <Route exact path="/result" element={<PaymentResult />} />
             </Routes>
           </div>
           <div className="flex w-full justify-end pr-5">

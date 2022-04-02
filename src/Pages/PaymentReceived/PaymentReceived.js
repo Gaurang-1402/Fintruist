@@ -1,13 +1,14 @@
 import React, { useState } from "react"
-import "./Paymentresult.css"
+import "./payment-received.css"
 import Button from "../../components/Button/Button"
 import { FiInfo, FiCopy } from "react-icons/fi"
 import copy from "../../assets/icons/copy.png"
 import useClipboard from "react-hook-clipboard"
 import createtext from "../../assets/images/createtext.png"
-import yellow from "../../assets/icons/yellow.svg"
+import green from "../../assets/icons/green.png"
+import received from "../../assets/images/receivedtext.png"
 
-const PaymentResult = () => {
+const PaymentReceived = () => {
   const [link, setLink] = useState("http://localhost:3030")
   const [clipboard, copyToClipboard] = useClipboard()
   return (
@@ -15,13 +16,13 @@ const PaymentResult = () => {
       <div className='grid grid-row-2  grid-flow-row ml-5'>
         <div>
           <h1 class='text-7xl font-bold float-left mb-8 '>
-            Payment Link is Created
+            Payment is successful
           </h1>
         </div>
 
         <div className='backgroundCard grid grid-cols-1 rounded-2xl'>
           <div className='m-3 mt-10'>
-            <img src={createtext} />
+            <img src={received} />{" "}
           </div>
           <div className='space-y-28 ml-6 -mt-10'>
             <div
@@ -29,8 +30,8 @@ const PaymentResult = () => {
               style={{ width: "1000px", height: "100px" }}
             >
               <div className='flex flex-wrap mt-2 ml-3'>
-                <div className='pt-2'>
-                  <img src={yellow} />
+                <div className='pt-3'>
+                  <img src={green} />
                 </div>
                 <h3 class='text-3xl text-left text-white mt-5 ml-3'>Status</h3>
               </div>
@@ -52,13 +53,23 @@ const PaymentResult = () => {
                 </div>
               </div>
             </div>
-            <div className='flex flex-col ml-3 mt-3'>
-              <button
-                className='text-center bg-red-600 
+            <div className='flex ml-3 mt-3'>
+              <div>
+                <button
+                  className='text-center bg-red-600 
         text-3xl text-white font-bold p-3 w-96 h-15 rounded-xl'
-              >
-                Delete Payment Link
-              </button>
+                >
+                  Raise Dispute
+                </button>
+              </div>
+              <div className='pl-10'>
+                <button
+                  className='text-center bg-red-600 
+        text-3xl text-white font-bold p-3 w-96 h-15 rounded-xl'
+                >
+                  Download Receipt
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -67,4 +78,4 @@ const PaymentResult = () => {
   )
 }
 
-export default PaymentResult
+export default PaymentReceived
