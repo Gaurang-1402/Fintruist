@@ -1,17 +1,25 @@
 import React from "react"
-import './Createpaymentlinkpage.css'
-import Button from '../../components/Button/Button'
+import "./Createpaymentlinkpage.css"
+import Button from "../../components/Button/Button"
 const CreatePaymentLinkPage = () => {
   return (
-    <div className="grid grid-row-2 grid-flow-row ml-5 ">
+    <div className='grid grid-row-2 grid-flow-row ml-5 '>
       <div>
-        <h1 class="text-5xl float-left mb-4">Create Payment Link</h1>
+        <h1 class='text-5xl float-left mb-4'>Create Payment Link</h1>
       </div>
 
-      <div className="backgroundCard grid grid-cols-2 gap-4 rounded-2xl p-3">
-        <div className="m-3">
-          <label for="text" className="text-md font-medium text-white float-left">Your email</label>
-          <input type="text" className="bg-cust_tertiary text-white md:text-md h-3/6 rounded-lg w-full p-2.5 focus:outline-none" />
+      <div className='backgroundCard grid grid-cols-2 gap-4 rounded-2xl p-3'>
+        <div className='m-3'>
+          <label
+            for='text'
+            className='text-md font-medium text-white float-left'
+          >
+            Your email
+          </label>
+          <input
+            type='text'
+            className='bg-cust_tertiary text-white md:text-md h-3/6 rounded-lg w-full p-2.5 focus:outline-none'
+          />
         </div>
         <div className='m-3'>
           <label

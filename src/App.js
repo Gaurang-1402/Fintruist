@@ -7,8 +7,6 @@ import CreatePaymentLinkPage from "./Pages/CreatePaymentLinkPage/CreatePaymentLi
 import SideNav from "./components/SideNav/SideNav"
 import background from "./assets/images/background.png"
 
-
-import background from "./assets/images/background.png"
 // import { MoralisProvider } from "react-moralis"
 function App() {
   // const serverUrl = "https://bqwuyxfazmgl.usemoralis.com:2053/server"
@@ -22,7 +20,7 @@ function App() {
           <Routes>
             <Route exact path='/' element={<Homepage />} />
             <Route exact path='/create' element={<CreatePaymentLinkPage />} />
-          <Route exact path='/result' element={<PaymentResultPage />} />
+            <Route exact path='/result' element={<PaymentResultPage />} />
           </Routes>
         </Router>
       </div>
