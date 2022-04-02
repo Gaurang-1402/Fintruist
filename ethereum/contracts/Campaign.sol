@@ -23,10 +23,10 @@ contract Campgn {
 
     Request[] public requests;
     address public manager;
-    // uint public minimum;
+    uint public minimum;
     uint public minContrib;
     mapping(address => bool) public approvers;
-    // address = new Map();
+    address = new Map();
     uint public approverCnt;
 
     modifier restricted() {
@@ -37,6 +37,13 @@ contract Campgn {
     function Campgn(uint minimum, address creator) public {
         manager = creator;
         minContrib = minimum;
+    }
+
+    function contribute() public payable {
+        require(msg.value > minContrib);
+        // approver = msg.sender;
+        approvers[msg.sender] = true;
+        approverCnt++;
     }
 
     function createRequest(string description, uint value, address recipient) public restricted {
@@ -50,6 +57,22 @@ contract Campgn {
 
         requests.push(newRequest);
     }
+
+    function approveRequest(uint index) public {
+        Request storage request = requests[index];
+        require(approvers[msg.sender]);
+        require(!request.approvals[msg.sender]);
+        request.approvals[msg.sender] = true;
+        request.approvalCnt++;
+    }
+
+    function finalizeRequest(uint index) public restricted {
+        Request storage request = requests[index];
+        require(request.approvalCnt > (approverCnt / 2));
+        require(!request.complete);
+        request.recipient.transfer(request.value);
+        request.complete = true;
+    }
     
     function getSummary() public view returns (
       uint, uint, uint, uint, address
@@ -62,5 +85,8 @@ contract Campgn {
           manager
         );
     }
-
+    
+    function getReqstCnt() public view returns (uint) {
+        return requests.length;
+    }
 }
