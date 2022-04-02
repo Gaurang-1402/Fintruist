@@ -14,7 +14,6 @@ function App() {
           <Route exact path='/create' element={<CreatePaymentLinkPage />} />
         </Routes>
       </Router>
-      <Sidebar />
     </div>
   )
 }
