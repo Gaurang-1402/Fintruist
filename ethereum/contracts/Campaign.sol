@@ -23,10 +23,10 @@ contract Campgn {
 
     Request[] public requests;
     address public manager;
-    uint public minimum;
+    // uint public minimum;
     uint public minContrib;
     mapping(address => bool) public approvers;
-    address = new Map();
+    // address = new Map();
     uint public approverCnt;
 
     modifier restricted() {
