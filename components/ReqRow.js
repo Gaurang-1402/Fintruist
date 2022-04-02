@@ -1,14 +1,24 @@
 import React, { Component } from "react";
 import { Table, Button } from "semantic-ui-react";
 import web3 from "../ethereum/web3";
-
+// import Campaign from "../ethereum/campaign";
 
 class ReqRow extends Component {
   onApprove = async () => {
     const Campgn = Campgn(this.props.address);
+    // const accounts = await web3.eth.getAccounts();
 
     const accounts = await web3.eth.getAccounts(); // fetch accnts
     await Campgn.methods.approveRequest(this.props.id).send({
+      from: accounts[0],
+    });
+  };
+
+  onFinalize = async () => {
+    const Campgn = Campgn(this.props.address);
+    // const accounts = await web3.eth.getAccounts();
+    // onFinalize = async () => {
+    await Campgn.methods.finalizeRequest(this.props.id).send({
       from: accounts[0],
     });
   };
@@ -24,10 +34,14 @@ class ReqRow extends Component {
         <Cell>{id}</Cell>
         <Cell>{request.description}</Cell>
         <Cell>{web3.utils.fromWei(request.value, "ether")}</Cell>
-        <Cell> {request.fetchName}</Cell>
+        {/* <cell> {request.fetchName}</cell> */}
+        <Cell>{request.recipient}</Cell>
+        <Cell>
+          {request.approvalCnt}/{approverCnt}
+        </Cell>
         <Cell>
           {request.complete ? null : (
-            <Button color="teal" basic onClick={this.onFinalize}>Finalize</Button>
+            <Button color="green" basic onClick={this.onApprove}>Approve</Button>
           )}
         </Cell>
       </Row>
