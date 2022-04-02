@@ -1,10 +1,12 @@
 import logo from "./logo.svg"
 import "./App.css"
+import Sidebar from './components/sidebar/sidebar.js'
 
 function App() {
   return (
+
     <div className='App bg-cust_back'>
-      <h1 className='text-3xl font-bold underline'>Hello world!</h1>
+       <Sidebar/>
     </div>
   )
 }
