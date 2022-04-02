@@ -2,10 +2,12 @@
 import "./App.css"
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
 import Homepage from "./Pages/Homepage/Homepage"
-import PaymentResultPage from "./Pages/PaymentResult/PaymentResult"
 import SideNav from "./components/SideNav/SideNav"
 import CreatePaymentLinkPage from "./Pages/CreatePaymentLinkPage/CreatePaymentLinkPage"
-import background from "./assets/images/background.png"
+import LoginPage from "./Pages/LoginPage/LoginPage"
+import PaymentResult from "./Pages/PaymentResult/PaymentResult"
+import ProductInformationPage from "./Pages/ProductInformationPage/ProductInformationPage"
+import PaymentReceived from "./Pages/PaymentReceived/PaymentReceived"
 
 // import { MoralisProvider } from "react-moralis"
 function App() {
@@ -19,8 +21,12 @@ function App() {
           <SideNav />
           <Routes>
             <Route exact path='/' element={<Homepage />} />
+            <Route exact path='/login' element={<LoginPage />} />
+            <Route exact path='/info' element={<ProductInformationPage />} />
+            <Route exact path='/received' element={<PaymentReceived />} />
+
             <Route exact path='/create' element={<CreatePaymentLinkPage />} />
-            <Route exact path='/result' element={<PaymentResultPage />} />
+            <Route exact path='/result' element={<PaymentResult />} />
           </Routes>
         </Router>
       </div>

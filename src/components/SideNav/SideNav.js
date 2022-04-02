@@ -4,15 +4,19 @@ import home from "../../assets/icons/home.png"
 import faq from "../../assets/icons/faq.png"
 import dashboard from "../../assets/icons/dashboard.png"
 import github from "../../assets/icons/github.svg"
-import { useNavigate } from "react-router-dom"
+import { useNavigate, useLocation } from "react-router-dom"
 import logo2 from "../../assets/images/logo-2.png"
+
 const SideNav = () => {
   const navigate = useNavigate()
   const goHome = () => {
     navigate("/")
   }
-
-  return (
+  const location = useLocation()
+  console.log(location.pathname)
+  return location.pathname === "/login" ? (
+    <></>
+  ) : (
     <div style={{ marginLeft: "2rem", marginTop: "8rem" }}>
       <div className='flex pl-12 mb-10'>
         <img src={logo2} />
