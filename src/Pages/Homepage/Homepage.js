@@ -2,6 +2,7 @@ import React from "react"
 import logo from "../../assets/images/logo.png"
 import background from "../../assets/images/background.png"
 import { useNavigate } from "react-router-dom"
+import sideStuff from "../../assets/images/sideStuff.png"
 const Homepage = () => {
   //   const navigate = useNavigate()
 
@@ -10,7 +11,9 @@ const Homepage = () => {
       <div style={{ paddingTop: "10rem" }}>
         <div style={{ marginLeft: "6rem" }} className='h-184 w-184'>
           <img src={logo} className='' alt='logo' />
-          <div className='text-left ml-10 pt-5 text-7xl font-bold'>Trustly</div>
+          <div className='text-left ml-10 pt-5 text-7xl font-bold'>
+            Fintruist{" "}
+          </div>
           <div className='flex pt-10 w-full h-20'>
             <button
               className='text-center bg-cust_tertiary ml-10
@@ -32,6 +35,7 @@ const Homepage = () => {
             </button>
           </div>
         </div>
+        <img src={sideStuff} />
       </div>
     </div>
   )
