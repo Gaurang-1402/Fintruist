@@ -1,5 +1,6 @@
 import React from "react"
 import './Createpaymentlinkpage.css'
+import Button from '../../components/Button/Button'
 const Homepage = () => {
   return (
     <div>
@@ -31,7 +32,7 @@ const Homepage = () => {
           <input type="text" className="bg-cust_tertiary text-white md:text-md h-3/6 rounded-lg w-full p-2.5 focus:outline-none" />
         </div>
         <div className="float-left">
-          <button type="submit" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Login</button>
+          <Button className="p-3" buttonText="Create Payment Link"/>
         </div>
       </div>
     </div>
