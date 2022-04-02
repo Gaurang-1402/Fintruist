@@ -1,10 +1,12 @@
 import React from "react"
 import './Createpaymentlinkpage.css'
 import Button from '../../components/Button/Button'
-const Homepage = () => {
+const CreatePaymentLinkPage = () => {
   return (
-    <div>
-      <h1 class="text-5xl float-left mb-4">Create Payment Link</h1>
+    <div className="grid grid-row-2 grid-flow-row">
+      <div>
+        <h1 class="text-5xl float-left mb-4">Create Payment Link</h1>
+      </div>
 
       <div className="backgroundCard grid grid-cols-2 gap-4">
         <div className="m-3">
@@ -39,4 +41,4 @@ const Homepage = () => {
   )
 }
 
-export default Homepage
+export default CreatePaymentLinkPage
