@@ -10,7 +10,6 @@ const SignUpForm = () => {
   const [password, setPassword] = useState("")
   const [email, setEmail] = useState("")
   const [confirmPassword, setConfirmPassword] = useState("")
-  let navigate = useNavigate()
   //   const handleSubmit = (e) => {
   //     e.preventDefault()
   //     var data = JSON.stringify({

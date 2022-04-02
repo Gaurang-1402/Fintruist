@@ -18,6 +18,7 @@ function App() {
           <SideNav />
           <Routes>
             <Route exact path='/' element={<Homepage />} />
+            <Login />
           </Routes>
         </Router>
       </div>
