@@ -7,6 +7,13 @@
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
     "@web3auth/web3auth": "^0.7.0",
+    "@truffle/hdwallet-provider": "^2.0.4",
+    "fs-extra": "^10.0.1",
+    "ganache-cli": "^6.12.1",
+    "mocha": "^9.2.1",
+    "solc": "^0.8.13",
+    "terser": "^5.12.0",
+    "web3": "^1.7.1",
     "crypto": "^1.0.1",
     "crypto-browserify": "^3.12.0",
     "moralis": "^1.5.8",
@@ -27,7 +34,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "mocha",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
