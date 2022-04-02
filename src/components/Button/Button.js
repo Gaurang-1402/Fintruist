@@ -1,13 +1,14 @@
 import React from "react"
 import "./button.css"
-const Button = ({ handleButtonClick, buttonText }) => {
+const Button = (props) => {
   return (
     <button
-      onClick={() => handleButtonClick()}
+      {...props}
+      onClick={() => props.handleButtonClick()}
       className='text-center bg-cust_tertiary
- text-1xl text-white font-bold w-56 h-15 rounded-xl'
+ text-1xl text-white font-bold p-3 w-56 h-15 rounded-xl'
     >
-      {buttonText}
+      {props.buttonText}
     </button>
   )
 }
