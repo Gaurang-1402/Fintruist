@@ -28,6 +28,7 @@ function App() {
 
   return (
     <>
+<<<<<<< HEAD
       <div className="App flex h-screen bg-cust_back">
         <Router>
           <div className="flex">
@@ -63,6 +64,21 @@ function App() {
               )}
             </div>
           </div>
+=======
+      {/* <MoralisProvider serverUrl={serverUrl} appId={appId}> */}
+
+      <div className='App flex h-screen bg-gradient-to-r from-indigo-200 via-red-200 to-yellow-100'>
+        <Router>
+          <SideNav />
+          <Routes>
+            <Route exact path='/' element={<Homepage />} />
+            <Route exact path='/login' element={<LoginPage />} />
+            <Route exact path='/info' element={<ProductInformationPage />} />
+            <Route exact path='/received' element={<PaymentReceived />} />
+            <Route exact path='/create' element={<CreatePaymentLinkPage />} />
+            <Route exact path='/result' element={<PaymentResult />} />
+          </Routes>
+>>>>>>> 76ff5ef2e5fa89975537f8e92e86642110232534
         </Router>
       </div>
     </>

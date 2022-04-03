@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import "./payment-received.css"
 import Button from "../../components/Button/Button"
 import { FiInfo, FiCopy } from "react-icons/fi"
@@ -7,8 +7,30 @@ import useClipboard from "react-hook-clipboard"
 import createtext from "../../assets/images/createtext.png"
 import green from "../../assets/icons/green.png"
 import received from "../../assets/images/receivedtext.png"
+import { Widget, addResponseMessage } from "react-chat-widget"
+import "react-chat-widget/lib/styles.css"
 
 const PaymentReceived = () => {
+  const botdocAPIToken = "3067565241b95f886af0ad699a2542d29c172910"
+  useEffect(() => {
+    addResponseMessage(`
+   Welcome to Fintruist!
+
+Hello Neel. this is Dasha from Fintruist. It seems like you 
+used our services earlier today.
+
+I'd like to ask you a few questions about the experience.
+Do you have two minutes now?
+
+`)
+  }, [])
+
+  const handleNewUserMessage = (newMessage) => {
+    console.log(`New message incoming! ${newMessage}`)
+    // Now send the message throught the backend API
+    addResponseMessage("response")
+  }
+
   const [link, setLink] = useState("http://localhost:3030")
   const [clipboard, copyToClipboard] = useClipboard()
   return (
@@ -74,6 +96,7 @@ const PaymentReceived = () => {
           </div>
         </div>
       </div>
+      <Widget handleNewUserMessage={handleNewUserMessage} />
     </div>
   )
 }
