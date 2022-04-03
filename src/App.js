@@ -1,34 +1,36 @@
-import logo from "./logo.svg"
 import "./App.css"
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
 import Homepage from "./Pages/Homepage/Homepage"
 import SideNav from "./components/SideNav/SideNav"
-import background from "./assets/images/background.png"
-import Login from "./Pages/signup/login"
+import CreatePaymentLinkPage from "./Pages/CreatePaymentLinkPage/CreatePaymentLinkPage"
+import LoginPage from "./Pages/LoginPage/LoginPage"
+import PaymentResult from "./Pages/PaymentResult/PaymentResult"
+import ProductInformationPage from "./Pages/ProductInformationPage/ProductInformationPage"
+import PaymentReceived from "./Pages/PaymentReceived/PaymentReceived"
 import Landingpage from "./Pages/Landing/landingpage"
-import {useLocation} from 'react-router-dom'
 
-
+// import { MoralisProvider } from "react-moralis"
 function App() {
-  const location = useLocation()
-  console.log(location.pathname)
+  // const serverUrl = "https://bqwuyxfazmgl.usemoralis.com:2053/server"
+  // const appId = "8AFd0WfrQKOtx64ZOz7M7tgf3yJu2SD3zAKO5eDM"
   return (
-  
     <>
-      <div
-        className='App flex bg-cust_back'
-        style={{ backgroundImage: `url(${background})` }}
-      >
+      {/* <MoralisProvider serverUrl={serverUrl} appId={appId}> */}
+      <div className='App flex h-screen bg-cust_back'>
         <Router>
-          {location.pathname != '/login' && <SideNav/>}
+          <SideNav />
           <Routes>
             <Route exact path='/' element={<Homepage />} />
-            
-            <Route exact path='/login' element={<Login />} />
-            <Route exact path='/main' element={<Landingpage/>} />
+            <Route exact path='/login' element={<LoginPage />} />
+            <Route exact path='/info' element={<ProductInformationPage />} />
+            <Route exact path='/received' element={<PaymentReceived />} />
+            <Route exact path='/main' element={<Landingpage />} />
+            <Route exact path='/create' element={<CreatePaymentLinkPage />} />
+            <Route exact path='/result' element={<PaymentResult />} />
           </Routes>
         </Router>
       </div>
+      {/* </MoralisProvider> */}
     </>
   )
 }

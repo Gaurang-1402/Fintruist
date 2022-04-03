@@ -20,5 +20,5 @@ module.exports = {
   fontFamily: {
     openSans: ["Open Sans", "sans-serif"],
   },
-  plugins: [require("tailwind-scrollbar-hide")],
+  plugins: [],
 }
