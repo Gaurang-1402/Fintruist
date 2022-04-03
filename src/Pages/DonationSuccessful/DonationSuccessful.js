@@ -1,7 +1,7 @@
 import React from "react"
 import donateText from "../../assets/images/donate-successful.png"
 import bubble from "../../assets/images/bubble.png"
-
+import logo from "../../assets/images/logo.png"
 const DonationSuccessful = () => {
   return (
     <div>
