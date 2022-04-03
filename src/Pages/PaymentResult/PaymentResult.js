@@ -15,7 +15,7 @@ const PaymentResult = () => {
       <div className='grid grid-row-2  grid-flow-row ml-5'>
         <div>
           <h1 class='text-7xl font-bold float-left mb-8 '>
-            Payment Link is Created
+            Campaign Payment Link
           </h1>
         </div>
 

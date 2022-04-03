@@ -17,30 +17,36 @@ const Homepage = () => {
             className='text-center bg-cust_tertiary ml-10
            text-2xl text-white font-bold w-60 h-20 rounded-xl'
           >
-            Connect to wallet
+            Connect your wallet
           </button>
         </div>
       </div>
       <div style={{ paddingTop: "8rem" }}>
         <div style={{ marginLeft: "6rem" }} className='h-184 w-184'>
           <img src={logo} className='' alt='logo' />
-
+          <h1 class='text-3xl mt-4 font-bold text-left mb-8 '>
+            Donate to{" "}
+            <span className='font-black'>
+              charitable crowdfunding campaigns
+            </span>{" "}
+            based on their <span className='font-black'> deliverables</span>
+          </h1>
           <div className='flex pt-10 w-full h-20'>
             <button
               className='text-center bg-cust_tertiary ml-10
-              text-2xl text-white font-bold w-60 h-20 rounded-xl'
+              text-2xl text-white font-bold w-96 h-20 rounded-xl'
             >
-              Buyer
+              I am a Donor
             </button>
             <button
               className='text-center bg-cust_tertiary ml-10
-              text-2xl text-white font-bold w-60 h-20 rounded-xl'
+              text-2xl text-white font-bold w-128 h-20 rounded-xl'
             >
-              Seller
+              Create a campaign
             </button>
             <button
               className='text-center bg-cust_tertiary ml-10
-           text-2xl text-white font-bold w-60 h-20 rounded-xl'
+           text-2xl text-white font-bold w-96 h-20 rounded-xl'
             >
               Campaign
             </button>

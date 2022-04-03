@@ -8,6 +8,7 @@ import LoginPage from "./Pages/LoginPage/LoginPage"
 import PaymentResult from "./Pages/PaymentResult/PaymentResult"
 import ProductInformationPage from "./Pages/ProductInformationPage/ProductInformationPage"
 import PaymentReceived from "./Pages/PaymentReceived/PaymentReceived"
+import DonationSuccessful from "./Pages/DonationSuccessful/DonationSuccessful"
 
 // import { MoralisProvider } from "react-moralis"
 function App() {
@@ -27,6 +28,7 @@ function App() {
             <Route exact path='/received' element={<PaymentReceived />} />
             <Route exact path='/create' element={<CreatePaymentLinkPage />} />
             <Route exact path='/result' element={<PaymentResult />} />
+            <Route exact path='/donate' element={<DonationSuccessful />} />
           </Routes>
         </Router>
       </div>

@@ -11,7 +11,6 @@ import { Widget, addResponseMessage } from "react-chat-widget"
 import "react-chat-widget/lib/styles.css"
 
 const PaymentReceived = () => {
-  const botdocAPIToken = "3067565241b95f886af0ad699a2542d29c172910"
   useEffect(() => {
     addResponseMessage(`
    Welcome to Fintruist!
@@ -38,7 +37,7 @@ Do you have two minutes now?
       <div className='grid grid-row-2  grid-flow-row ml-5'>
         <div>
           <h1 class='text-7xl font-bold float-left mb-8 '>
-            Payment is successful
+            Campaign Payment Link
           </h1>
         </div>
 
@@ -89,7 +88,7 @@ Do you have two minutes now?
                   className='text-center bg-red-600 
         text-3xl text-white font-bold p-3 w-96 h-15 rounded-xl'
                 >
-                  Download Receipt
+                  Delete Payment Link
                 </button>
               </div>
             </div>
