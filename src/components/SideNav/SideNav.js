@@ -39,7 +39,7 @@ const SideNav = () => {
           <div>
             <button
               onClick={() => {
-                navigate("/faq");
+                navigate("/");
               }}
             >
               {location.pathname === "/faq" ? (
@@ -55,7 +55,7 @@ const SideNav = () => {
                 navigate("/dashboard");
               }}
             >
-              {location.pathname === "/" ||
+              {location.pathname === "/create" ||
               location.pathname === "/result" ||
               location.pathname === "/received" ? (
                 <img src={whiteDashboard} />

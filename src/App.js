@@ -2,14 +2,14 @@
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Homepage from "./Pages/Homepage/Homepage";
-import PaymentResult from "./Pages/PaymentResult/PaymentResult";
-import PaymentReceived from "./Pages/PaymentReceived/PaymentReceived";
-import CreatePaymentLinkPage from "./Pages/CreatePaymentLinkPage/CreatePaymentLinkPage";
-import ProductInformationPage from "./Pages/ProductInformationPage/ProductInformationPage";
-import LoginPage from "./Pages/LoginPage/LoginPage";
 import SideNav from "./components/SideNav/SideNav";
+import CreatePaymentLinkPage from "./Pages/CreatePaymentLinkPage/CreatePaymentLinkPage";
+import LoginPage from "./Pages/LoginPage/LoginPage";
+import PaymentResult from "./Pages/PaymentResult/PaymentResult";
+import ProductInformationPage from "./Pages/ProductInformationPage/ProductInformationPage";
+import PaymentReceived from "./Pages/PaymentReceived/PaymentReceived";
+import DonationSuccessful from "./Pages/DonationSuccessful/DonationSuccessful";
 import LogoutButton from "./components/LogoutButton/LogoutButton";
-
 import {
   useMoralis,
   // useNativeBalance,
@@ -37,6 +37,7 @@ function App() {
               <Route exact path="/login" element={<LoginPage />} />
               <Route exact path="/info" element={<ProductInformationPage />} />
               <Route exact path="/received" element={<PaymentReceived />} />
+              <Route exact path="/donate" element={<DonationSuccessful />} />
 
               <Route exact path="/create" element={<CreatePaymentLinkPage />} />
               <Route exact path="/result" element={<PaymentResult />} />
