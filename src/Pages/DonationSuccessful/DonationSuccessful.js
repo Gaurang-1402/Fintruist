@@ -26,16 +26,20 @@ const DonationSuccessful = () => {
               </h1>
 
               <div className='flex pt-10 w-full h-64'>
-                <img src={donateText} />
+                <img alt='34433' src={donateText} />
               </div>
             </div>
           </div>
-          <div
-            style={{ paddingLeft: "12rem", paddingTop: "12rem" }}
-            className='flex  pt-24'
-          >
-            <img style={{ width: "40rem", height: "35rem" }} src={bubble} />
-          </div>
+          <img
+            style={{
+              marginTop: "12rem",
+              marginLeft: "9rem",
+              width: "40rem",
+              height: "35rem",
+            }}
+            src={bubble}
+          />
+          =
         </div>
       </div>
       <div></div>
