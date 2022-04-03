@@ -7,7 +7,6 @@ const LogoutButton = () => {
   const { logout, isAuthenticated } = useAuth0();
   const navigate = useNavigate();
 
-  console.log(isAuthenticated);
   return (
     <img
       src={auth0}
