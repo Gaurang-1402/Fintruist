@@ -1,0 +1,103 @@
+{
+    "default": {
+      "voiceInfo": {
+        "lang": "en-US",
+        "speaker": "default",
+        "speed": 1
+      },
+  
+      "phrases": {
+  
+        "question_1": {
+          "random": [
+            [{
+              "text": "Perfect, thank you. Quick question. How would you rate the our app? Please use the scale of 1 to 5."
+            }],
+            [{
+              "text": "Awesome, thank you. Quick question. How would you rate the our app on the scale of 1 to 5?"
+            }]
+          ],
+          "repeat": [
+            {
+              "text": "I was just saying that how would you rate the overall interation of the app? Please rate as 1 to 5."
+            }
+          ]
+        },
+        
+        "transition": {
+          "random": [
+            [{ "text": "Sorry you were unstaisfied. I will be sure to escalate your feedback." }],
+            [{ "text": "Oh, thank you for sharing that. I will make sure your feedback gets heard. " }],
+            [{ "text": "So sorry about your experience and thank you for sharing." }]
+          ]
+        },
+  
+        "i_can_hear_you": [{ "text": "Yes, I hear you" }],
+        "dont_understand": {
+          "random": [
+            [{ "text": "Sorry, could you say it again?" }],
+            [
+              {
+                "text": "Sorry, the connection dropped for a second. Could you say that again?"
+              }
+            ],
+            [{ "text": "Sorry, I didn't quite catch that." }],
+            [{ "text": "Could you say it one more time?" }]
+          ]
+        },
+        "dont_understand_hangup": [
+          {
+            "text": "I'm sorry I can barely hear you. I'll try to call you later! Bye!"
+          }
+        ],
+        "dont_understand_forward": [
+          {
+            "text": "I'm sorry, let me transfer you to another agent. Please stand by!"
+          }
+        ],
+        "mhm": [{ "text": "Mgm..." }],
+        "yes_i_am_a_robot": [
+          {
+            "text": "Actually I am an advanced AI. Just don't tell my boss or I'll be out of a job."
+          }
+        ],
+        "is_that_all": [{ "text": "Is that all?" }],
+        "repeat_question": [{ "text": "Can you repeat the question, please?" }]
+      },
+  
+      "types": {},
+      "macros": {
+        "question_1": {},
+        "transition": {},
+        "question_1_n": {},
+        "question_2": {},
+        "question_2_n": {},
+        "question_3": {},
+        "question_3_n": {},
+        "question_3_p": {},
+        "final_q": {},
+        "final_bye": {},
+        "i_will_call_back": {},
+        "see_you_soon": {},
+        "hello": {},
+        "when_callback": {},
+        "i_said": {},
+        "sorry_wont_call": {},
+        "i_will_wait": {},
+        "i_can_hear_you": {},
+        "dont_understand": {},
+        "dont_understand_hangup": {},
+        "dont_understand_forward": {},
+        "mhm": {},
+        "yes_i_am_a_robot": {},
+        "is_that_all": {},
+        "greeting": {},
+        "name": {},
+        "will_help": {},
+        "how_much": {},
+        "confirm_food_order": {},
+        "repeat_question": {}
+      }
+    }
+  }
+  
